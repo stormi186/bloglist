@@ -47,3 +47,11 @@ User can run test that verifies that if the likes property is missing from the r
 ### 4.12*: Blog list tests, step5
 
 User can run test that verifies if the title and url properties are missing from the request data, the backend responds to the request with the status code 400 Bad Request
+
+### 4.13 Blog list expansions, step1
+
+User can delete a single blog and test it using npm test
+
+### 4.14 Blog list expansions, step2
+
+User can update a blog (mostly number of likes) and test it using npm test
