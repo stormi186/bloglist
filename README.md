@@ -55,3 +55,23 @@ User can delete a single blog and test it using npm test
 ### 4.14 Blog list expansions, step2
 
 User can update a blog (mostly number of likes) and test it using npm test
+
+### 4.15: bloglist expansion, step4
+
+We can create new users and save them to the database
+
+### 4.16*: bloglist expansion, step5
+
+Both username(unique) and password must be given when creating users, and they must be atleast 3 characters long
+
+### 4.17: bloglist expansion, step6
+
+Every blog is assigned to a creator
+
+### 4.18: bloglist expansion, step7
+
+Token based authentication is implemented
+
+### 4.19: bloglist expansion, step8
+
+Adding new blogs is possible only if a valid token is sent
