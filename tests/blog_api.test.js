@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose')
 const supertest = require('supertest')
 const app = require('../app')
@@ -82,13 +83,13 @@ describe('when there is initially some blogs saved', () => {
       const loginResponse = await api
         .post('/api/login')
         .send({
-          "username":"username1",
-          "password":"12456789"
+          'username':'username1',
+          'password':'12456789'
         })
         .expect(200)
         .expect('Content-Type', /application\/json/)
 
-      let token = 'bearer ' + loginResponse.body.token
+      let token = loginResponse.body.token
 
       const newBlog = {
         title: 'Jasna testing',
@@ -120,13 +121,13 @@ describe('when there is initially some blogs saved', () => {
       await Blog.deleteMany({})
 
       const loginResponse = await api
-      .post('/api/login')
-      .send({
-        "username":"username1",
-        "password":"12456789"
-      })
-      .expect(200)
-      .expect('Content-Type', /application\/json/)
+        .post('/api/login')
+        .send({
+          'username':'username1',
+          'password':'12456789'
+        })
+        .expect(200)
+        .expect('Content-Type', /application\/json/)
 
       let token = 'bearer ' + loginResponse.body.token
 

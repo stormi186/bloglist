@@ -146,7 +146,7 @@ describe('most blogs', () => {
 
   test('of returning the author with most blogs', () => {
     const result = listHelper.mostBlogs(listWithMultipleBlogs)
-    expect(result).toEqual({author: "You", blogs: 3})
+    expect(result).toEqual({author: 'You', blogs: 3})
   })
 })
 
@@ -197,6 +197,6 @@ describe('most author likes', () => {
 
   test('of returning the author with largest amount of likes', () => {
     const result = listHelper.mostLikes(listWithMultipleBlogs)
-    expect(result).toEqual({author: "You", likes: 30})
+    expect(result).toEqual({author: 'You', likes: 30})
   })
 })

@@ -1,7 +1,6 @@
 const bcrypt = require('bcrypt')
 const usersRouter = require('express').Router()
 const User = require('../models/user')
-const Blog = require('../models/blog')
 
 usersRouter.get('/', async (request, response) => {
   const users = await User
@@ -15,12 +14,12 @@ usersRouter.post('/', async (request, response, next) => {
     const body = request.body
     const users = await User.find({})
 
-    if (!body.username || body.username === "") {
+    if (!body.username || body.username === '') {
       return response.status(400).json({
         error: 'name is missing'
       })
     }
-    if (!body.password || body.password === "") {
+    if (!body.password || body.password === '') {
       return response.status(400).json({
         error: 'password is missing'
       })
@@ -39,7 +38,7 @@ usersRouter.post('/', async (request, response, next) => {
     const existingUsername = users.find(o => o.username === body.username)
 
     if(typeof existingUsername !== 'undefined') {
-      return res.status(400).json({
+      return response.status(400).json({
         error: 'that username already exists, choose another one'
       })
     }

@@ -75,3 +75,11 @@ Token based authentication is implemented
 ### 4.19: bloglist expansion, step8
 
 Adding new blogs is possible only if a valid token is sent
+
+### 4.20*: bloglist expansion, step9
+
+App uses tokenExtractor middleware to extract the token from the header
+
+### 4.21*: bloglist expansion, step10
+
+Only user that created the blog can delete that blog
